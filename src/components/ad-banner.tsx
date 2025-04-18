@@ -10,8 +10,8 @@ interface AdBannerProps {
 export default function AdBanner({ text, image, link = "#" }: AdBannerProps) {
   return (
     <section className="py-4 px-4">
-      <Link href={link} className="block relative">
-        <div className="relative h-[100px] w-full overflow-hidden rounded-md">
+      <Link href={link} className="block relative container mx-auto">
+        <div className="relative h-[100px] w-full overflow-hidden">
           <Image src={image || "/placeholder.svg"} alt={text} fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent flex items-center">
             <div className="px-8">

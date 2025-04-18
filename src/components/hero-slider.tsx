@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import { ChevronLeft, ChevronRight, TvMinimalPlay } from 'lucide-react'
 
 
 export const heroSlides = [
@@ -35,22 +35,18 @@ export const heroSlides = [
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // Function to handle next slide
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1))
   }
 
-  // Function to handle previous slide
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? heroSlides.length - 1 : prev - 1))
   }
 
-  // Function to go to a specific slide
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
   }
 
-  // Auto-rotate slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide()
@@ -77,6 +73,12 @@ export default function HeroSlider() {
               priority={index === 0}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+            <div className="absolute bottom-[120px] right-10 flex items-center space-x-2 space-x-reverse z-20">
+        <button className="inline-flex items-center gap-2 text-sm bg-rose-500 hover:bg-rose-600 py-1 px-4 transition-all rounded">
+             <TvMinimalPlay />
+            <span> تشاهدون الآن</span>
+          </button>
+        </div>
             <div className="absolute bottom-10 right-10 text-white">
               <h2 className="text-4xl font-bold mb-2">{slide.title}</h2>
               <p className="text-sm opacity-80">{slide.subtitle}</p>
@@ -84,12 +86,7 @@ export default function HeroSlider() {
           </div>
         ))}
 
-        <div className="absolute bottom-4 left-4 flex items-center space-x-2 space-x-reverse z-20">
-          <button className="bg-pink-600 text-white px-3 py-1 rounded-md text-sm flex items-center">
-            <span>مشاهدة الآن</span>
-            <Play className="h-4 w-4 mr-1" />
-          </button>
-        </div>
+
 
         <div className="absolute bottom-4 right-1/2 transform translate-x-1/2 flex items-center space-x-1 space-x-reverse z-20">
           {heroSlides.map((_, index) => (

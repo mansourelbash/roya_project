@@ -4,7 +4,6 @@ interface PopularShowsProps {
   title: string
 }
 
-// Generate sample popular shows data
 const generatePopularShowsData = (count: number) => {
   return Array.from({ length: count }, (_, i) => ({
     id: `popular-${i + 1}`,

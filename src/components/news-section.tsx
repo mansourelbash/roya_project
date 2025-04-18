@@ -7,50 +7,52 @@ export const newsData = [
     title: 'هكذا ردت سيلاف فواخرجي على قرار فصلها من "الفنانين السوريين"',
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 1",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744891965.png",
   },
   {
     id: "2",
     title: "إحنا رايحين على فين.. علاء مبارك يهاجم محمد رمضان بعد إطلالته بأمريكا",
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 2",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744886311.png",
   },
   {
     id: "3",
     title: 'شيرين بيري، عن خاتم ألماس بالزين: "الخواتم"- فيديو',
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 3",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744896438.png",
   },
   {
     id: "4",
     title: 'حمزة نمرة يشوق جمهوره لـ"النومة السابعة"',
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 4",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744884530.png",
   },
   {
     id: "5",
     title: "نجاة علياء صبحي وابنتها من حادث مروع - صور",
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 5",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744881572.png",
   },
   {
     id: "6",
     title: 'محمد فضل شاكر: "والدي بريء وبواجه اتهامات جديدة"- فيديو',
     category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=200&width=300&text=News 6",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744894090.png",
   },
   {
     id: "7",
-    title: "أنتم البشر.. يُجاهدون في جحيمهم المحفوف بالموت",
-    category: "Trending",
+    title: '"سنو وايت" سواد في التقييم وممثلة "إسرائيلية" تضع ديزني بين فكي الفشل"',
+    category: "في مشاهير",
     date: "17/04/25",
-    image: "/placeholder.svg?height=400&width=600&text=News 7",
+    image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1743150119.png",
   },
+
+  
 ]
 export default function NewsSection() {
   return (
@@ -99,7 +101,7 @@ export default function NewsSection() {
             <Link href={`/news/7`} className="block group">
               <div className="relative h-64 rounded-md overflow-hidden mb-3">
                 <Image
-                  src="/placeholder.svg?height=300&width=600&text=Featured News"
+                  src="https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744871500.png"
                   alt="Featured News"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

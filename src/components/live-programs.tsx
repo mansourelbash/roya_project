@@ -2,35 +2,47 @@ import ContentGrid from "./content-grid"
 
 const programsData = [
   {
-    id: "1",
+    id: "56",
     title: "دنيا يا دنيا",
-    image: "/placeholder.svg?height=160&width=280&text=Program 1",
-    category: "منوعات",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/56/YLz2eNNpo47eVUJ.webp",
+    category: "منوعات"
   },
   {
-    id: "2",
-    title: "صباح الخير يا أردن",
-    image: "/placeholder.svg?height=160&width=280&text=Program 2",
-    category: "صباحي",
+    id: "65",
+    title: "حلوة يا دنيا",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/65/gM02XHZQofsojjo.webp",
+    category: "منوعات"
   },
   {
-    id: "3",
-    title: "كرفان",
-    image: "/placeholder.svg?height=160&width=280&text=Program 3",
-    category: "ترفيهي",
-  },
-  {
-    id: "4",
+    id: "59",
     title: "نبض البلد",
-    image: "/placeholder.svg?height=160&width=280&text=Program 4",
-    category: "إخباري",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/59/OSmndPcjFL7ywDS.webp",
+    category: "إخباري"
   },
   {
-    id: "5",
-    title: "رؤيا الإخبارية",
-    image: "/placeholder.svg?height=160&width=280&text=Program 5",
-    category: "إخباري",
+    id: "1450",
+    title: "من هنا نبدأ",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/1450/j5uBy76bfhB2Eke.webp",
+    category: "منوعات"
   },
+  {
+    id: "171",
+    title: "مطبخ رؤيا",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/171/duGRTDcnzcuf6lr.webp",
+    category: "طبخ"
+  },
+  {
+    id: "1228",
+    title: "أخبار السابعة",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/1228/lYFhi8NZalfAjQz.webp",
+    category: "إخباري"
+  },
+  {
+    id: "76",
+    title: "كرفان",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R9134/images/programs/76/HGJT8xeNqo3LSht.webp",
+    category: "ترفيهي"
+  }
 ]
 
 export default function LivePrograms() {

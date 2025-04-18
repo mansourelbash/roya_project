@@ -6,18 +6,41 @@ import NewsFooter from "@/components/news/news-footer"
 import SocialShare from "@/components/news/social-share"
 import AdBanner from "@/components/ad-banner"
 import Header from "@/components/header"
+// import { Metadata, ResolvingMetadata } from 'next'
 
-const getNewsById = (id: string) => {
+interface NewsItem {
+  id: string
+  title: string
+  category: string
+  date: string
+  image: string
+  content: string
+  author: string
+  tags: string[]
+}
 
-  const allNews = [
+interface RelatedNewsItem {
+  id: string
+  title: string
+  category: string
+  date: string
+  image: string
+}
+
+// interface PageProps {
+//   params: { id: string }
+//   searchParams?: { [key: string]: string | string[] | undefined }
+// }
+
+const getNewsById = (id: string): NewsItem | undefined => {
+  const allNews: NewsItem[] = [
     {
       id: "1",
       title: 'هكذا ردت سيلاف فواخرجي على قرار فصلها من "الفنانين السوريين"',
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744891965.png",
-      content:
-        "في أول تعليق لها على قرار فصلها من نقابة الفنانين السوريين، عبّرت الفنانة سلاف فواخرجي عن استغرابها مما حدث، مؤكدة أن القرار جاء مفاجئاً ودون سابق إنذار. وأضافت أنها ستقوم باتخاذ الخطوات القانونية المناسبة، مشددة على احترامها للنقابة ومكانتها رغم ما وصفته بـ\"الظلم\" الذي طالها.",
+      content: "في أول تعليق لها على قرار فصلها من نقابة الفنانين السوريين، عبّرت الفنانة سلاف فواخرجي عن استغرابها مما حدث، مؤكدة أن القرار جاء مفاجئاً ودون سابق إنذار. وأضافت أنها ستقوم باتخاذ الخطوات القانونية المناسبة، مشددة على احترامها للنقابة ومكانتها رغم ما وصفته بـ\"الظلم\" الذي طالها.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "سوريا", "فن"],
     },
@@ -27,8 +50,7 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744886311.png",
-      content:
-        "هاجم علاء مبارك، نجل الرئيس المصري الأسبق حسني مبارك، الفنان محمد رمضان بعد ظهوره الأخير في أحد العروض بأمريكا بإطلالة أثارت الجدل. وكتب مبارك في منشور عبر \"إكس\": \"إحنا رايحين على فين؟\"، في إشارة إلى ما وصفه بانحدار الذوق العام، مطالباً الفنانين بتحمل مسؤولياتهم تجاه صورة الفن المصري.",
+      content: "هاجم علاء مبارك، نجل الرئيس المصري الأسبق حسني مبارك، الفنان محمد رمضان بعد ظهوره الأخير في أحد العروض بأمريكا بإطلالة أثارت الجدل. وكتب مبارك في منشور عبر \"إكس\": \"إحنا رايحين على فين؟\"، في إشارة إلى ما وصفه بانحدار الذوق العام، مطالباً الفنانين بتحمل مسؤولياتهم تجاه صورة الفن المصري.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "مصر", "محمد رمضان"],
     },
@@ -38,8 +60,7 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744896438.png",
-      content:
-        "أثارت المؤثرة شيرين بيري الجدل عبر مواقع التواصل الاجتماعي بعد ظهورها بخاتم ألماس فاخر خلال فيديو ظهرت فيه وهي تستعرض مجوهراتها. وقالت مازحة: \"الخواتم مش أي خواتم\"، ما دفع المتابعين للتفاعل مع الفيديو بين معجبين ومشككين في قيمة الخاتم الحقيقية.",
+      content: "أثارت المؤثرة شيرين بيري الجدل عبر مواقع التواصل الاجتماعي بعد ظهورها بخاتم ألماس فاخر خلال فيديو ظهرت فيه وهي تستعرض مجوهراتها. وقالت مازحة: \"الخواتم مش أي خواتم\"، ما دفع المتابعين للتفاعل مع الفيديو بين معجبين ومشككين في قيمة الخاتم الحقيقية.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "فيديو", "مجوهرات"],
     },
@@ -49,8 +70,7 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744884530.png",
-      content:
-        "شارك الفنان حمزة نمرة جمهوره عبر حساباته على مواقع التواصل الاجتماعي مقطعاً موسيقياً من ألبومه القادم \"النومة السابعة\"، معلقاً: \"قريباً\". وتفاعل الجمهور بشكل واسع مع المقطع، وسط حالة من الترقب لإطلاق الأغنية الكاملة، والتي يقال إنها تحمل طابعاً موسيقياً مختلفاً عن أعماله السابقة.",
+      content: "شارك الفنان حمزة نمرة جمهوره عبر حساباته على مواقع التواصل الاجتماعي مقطعاً موسيقياً من ألبومه القادم \"النومة السابعة\"، معلقاً: \"قريباً\". وتفاعل الجمهور بشكل واسع مع المقطع، وسط حالة من الترقب لإطلاق الأغنية الكاملة، والتي يقال إنها تحمل طابعاً موسيقياً مختلفاً عن أعماله السابقة.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "موسيقى", "مصر"],
     },
@@ -60,8 +80,7 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744881572.png",
-      content:
-        "تعرضت الفنانة علياء صبحي لحادث سير مروع أثناء تواجدها برفقة ابنتها على أحد الطرق السريعة. وأكدت صبحي عبر حسابها على إنستغرام أنها وابنتها بخير، شاكرة كل من تواصل معها للاطمئنان. ونشرت صوراً من موقع الحادث تُظهر الأضرار التي لحقت بالسيارة.",
+      content: "تعرضت الفنانة علياء صبحي لحادث سير مروع أثناء تواجدها برفقة ابنتها على أحد الطرق السريعة. وأكدت صبحي عبر حسابها على إنستغرام أنها وابنتها بخير، شاكرة كل من تواصل معها للاطمئنان. ونشرت صوراً من موقع الحادث تُظهر الأضرار التي لحقت بالسيارة.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "حوادث", "صور"],
     },
@@ -71,8 +90,7 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744894090.png",
-      content:
-        "في ظهور إعلامي جديد، دافع محمد فضل شاكر عن والده الفنان فضل شاكر، مؤكداً أن الأخير بريء من الاتهامات الموجهة له، مشيراً إلى أن هناك حملة ممنهجة لتشويه صورته. ونشر شاكر مقطع فيديو عبر صفحته الشخصية تحدث فيه عن تفاصيل ما وصفه بـ\"الظلم الإعلامي\" الذي يطال والده.",
+      content: "في ظهور إعلامي جديد، دافع محمد فضل شاكر عن والده الفنان فضل شاكر، مؤكداً أن الأخير بريء من الاتهامات الموجهة له، مشيراً إلى أن هناك حملة ممنهجة لتشويه صورته. ونشر شاكر مقطع فيديو عبر صفحته الشخصية تحدث فيه عن تفاصيل ما وصفه بـ\"الظلم الإعلامي\" الذي يطال والده.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "لبنان", "فيديو"],
     },
@@ -82,19 +100,17 @@ const getNewsById = (id: string) => {
       category: "في مشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1743150119.png",
-      content:
-        "واجه فيلم \"سنو وايت\" الجديد من إنتاج ديزني موجة من الانتقادات بسبب اختياراته الجريئة في الطاقم التمثيلي والتغييرات الكبيرة في القصة الكلاسيكية. وزاد الجدل بعد الكشف عن مشاركة ممثلة \"إسرائيلية\" في دور البطولة، ما أثار غضب العديد من المتابعين ودفعهم لمقاطعة الفيلم، في وقت تشير فيه التقييمات الأولية إلى تراجع كبير في شعبية العمل.",
+      content: "واجه فيلم \"سنو وايت\" الجديد من إنتاج ديزني موجة من الانتقادات بسبب اختياراته الجريئة في الطاقم التمثيلي والتغييرات الكبيرة في القصة الكلاسيكية. وزاد الجدل بعد الكشف عن مشاركة ممثلة \"إسرائيلية\" في دور البطولة، ما أثار غضب العديد من المتابعين ودفعهم لمقاطعة الفيلم، في وقت تشير فيه التقييمات الأولية إلى تراجع كبير في شعبية العمل.",
       author: "رؤيا الإخبارية",
       tags: ["مشاهير", "مصر", "سينما"],
     },
   ];
-  
 
-  return allNews.find((news) => news.id === id)
+  return allNews.find((news) => news.id === id);
 }
 
-const getRelatedNews = (currentId: string) => {
-  const allNews = [
+const getRelatedNews = (currentId: string): RelatedNewsItem[] => {
+  const allNews: RelatedNewsItem[] = [
     {
       id: "1",
       title: 'هكذا ردت سيلاف فواخرجي على قرار فصلها من "الفنانين السوريين"',
@@ -165,24 +181,52 @@ const getRelatedNews = (currentId: string) => {
       date: "17/04/25",
       image: "/placeholder.svg?height=100&width=150&text=Related 10",
     },
-  ]
+  ];
 
-  return allNews.filter((news) => news.id !== currentId)
+  return allNews.filter((news) => news.id !== currentId);
 }
 
+// export async function generateMetadata(
+//   { params }: { params: { id: string } },
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   const news = getNewsById(params.id)
+
+//   if (!news) {
+//     return {
+//       title: "الخبر غير موجود | رؤيا",
+//       description: "هذا الخبر غير موجود أو قد تم حذفه.",
+//       icons: {
+//         icon: "/favicon.ico",
+//       },
+//     }
+//   }
+
+//   return {
+//     title: `${news.title} | رؤيا`,
+//     description: news.content.slice(0, 150) + "...",
+//     icons: {
+//       icon: "/favicon.ico",
+//     },
+//     openGraph: {
+//       title: `${news.title} | رؤيا`,
+//       description: news.content.slice(0, 150) + "...",
+//       images: [news.image],
+//     },
+//   }
+// }
+
+
+
 export default async function NewsPage({ params }: { params: Promise<{ id: string }> })  {
-
-
   const { id } = await params;
+
   const news = getNewsById(id)
   const relatedNews = getRelatedNews(id)
 
   if (!news) {
     return (
-      <div
-        className="min-h-screen bg-gray-900 text-white flex items-center justify-center"
-        dir="rtl"
-      >
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center" dir="rtl">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">الخبر غير موجود</h1>
           <Link
@@ -194,7 +238,7 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -225,7 +269,7 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
                     href="/news"
                     className="text-pink-500 hover:text-pink-400"
                   >
-                    في مشاهير
+                    {news.category}
                   </Link>
                   <span className="mx-2 text-gray-500">|</span>
                   <span className="text-gray-400">{news.date}</span>
@@ -265,10 +309,11 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
 
             <div className="relative h-[400px] w-full mb-8">
               <Image
-                src={news.image || "/placeholder.svg"}
+                src={news.image}
                 alt={news.title}
                 fill
                 className="object-cover rounded-lg"
+                priority
               />
             </div>
 
@@ -312,7 +357,7 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
                   >
                     <div className="relative h-24 w-32 flex-shrink-0">
                       <Image
-                        src={item.image || "/placeholder.svg"}
+                        src={item.image}
                         alt={item.title}
                         fill
                         className="object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
@@ -369,5 +414,5 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
 
       <NewsFooter />
     </div>
-  )
+  );
 }

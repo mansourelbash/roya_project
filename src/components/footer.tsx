@@ -6,7 +6,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#1e2329] text-right" dir="rtl">
       <div className="container mx-auto px-4 py-8">
-        {/* Top scroll button */}
         <div className="flex justify-center -mt-12 mb-8">
           <button
             className="bg-white rounded-full p-2 shadow-lg"
@@ -30,7 +29,6 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Right column - Navigation and social links */}
           <div className="col-span-1 grid grid-cols-1 gap-6">
             <div className="flex justify-between">
               <div className="text-center">
@@ -202,7 +200,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-4">
+            {/* <div className="grid grid-cols-2 gap-4 mt-4">
               <Link href="#" className="flex justify-center">
                 <Image
                   src="https://roya.tv/_next/image?url=%2Fimages%2Froya-news.png&w=48&q=75"
@@ -235,9 +233,8 @@ export default function Footer() {
                   height={50}
                 />
               </Link>
-            </div>
+            </div> */}
           </div>
-          {/* Middle column - App downloads and channel info */}
           <div className="col-span-1">
             <div className="flex justify-end mb-4">
               <div className="flex items-center gap-2">
@@ -407,7 +404,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Left column - Logo and subscription */}
           <div className="col-span-1 flex flex-col items-center lg:items-start">
             <div className="flex-1">
               <div className="bg-slate-950 w-full flex flex-col gap-4 self-stretch h-full items-center justify-center p-6">

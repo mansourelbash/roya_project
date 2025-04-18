@@ -7,28 +7,43 @@ import { ChevronLeft, ChevronRight, TvMinimalPlay } from 'lucide-react'
 
 export const heroSlides = [
   {
+   id: 55,
+    title: "نشرة الأخبار",
+    subtitle: "مجتمعي",
+    image: "https://backend.roya-tv.com/imagechanger/Size03Q40R11M/images/programs/1311/glZcvYVUj2fM1KQ.webp",
+    live_now: true
+  },
+  {
     id: 1,
     title: "دنيا يا دنيا",
     subtitle: "برنامج المنوعات",
     image: "https://backend.roya-tv.com/imagechanger/Size03Q40R11M/images/programs/1357/Po4tBDzJKqXp4q4.webp",
+    live_now: false
+
   },
   {
     id: 2,
     title: "صباح الخير يا أردن",
     subtitle: "برنامج صباحي",
     image: "https://backend.roya-tv.com/imagechanger/Size01Q40R1656/images/programs/80/1oFm8KmkdQuXVkH.jpg",
+    live_now: false
+
   },
   {
     id: 3,
     title: "نبض البلد",
     subtitle: "برنامج إخباري",
     image: "https://backend.roya-tv.com/imagechanger/Size03Q40R11M/images/programs/1344/sLmKbVdjdsj7e3r.webp",
+    live_now: false
+
   },
   {
     id: 4,
     title: "كرفان",
     subtitle: "برنامج ترفيهي",
     image: "https://backend.roya-tv.com/imagechanger/Size03Q40R11M/images/programs/1304/nO2vdi3BeDlpv3r.webp",
+    live_now: false
+
   },
 ]
 
@@ -72,13 +87,16 @@ export default function HeroSlider() {
               className="object-cover"
               priority={index === 0}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-            <div className="absolute bottom-[120px] right-10 flex items-center space-x-2 space-x-reverse z-20">
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+          {slide.live_now && (
+          <div className="absolute bottom-[120px] right-10 flex items-center space-x-2 space-x-reverse z-20">
         <button className="inline-flex items-center gap-2 text-sm bg-rose-500 hover:bg-rose-600 py-1 px-4 transition-all rounded">
              <TvMinimalPlay />
             <span> تشاهدون الآن</span>
           </button>
         </div>
+         )}
+            
             <div className="absolute bottom-10 right-10 text-white">
               <h2 className="text-4xl font-bold mb-2">{slide.title}</h2>
               <p className="text-sm opacity-80">{slide.subtitle}</p>

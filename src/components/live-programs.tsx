@@ -52,6 +52,9 @@ export default function LivePrograms() {
       items={programsData}
       showCategory={true}
       linkPrefix="/programs"
+      height={true}
+      playVideo={true}
+      hideTitle={false}
     />
   )
 }

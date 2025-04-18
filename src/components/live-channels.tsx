@@ -91,12 +91,11 @@ export default function LiveChannels() {
 
   return (
     <section className="py-8 px-4 bg-[#111827] text-white relative">
-      <div className="flex justify-end mb-6">
-        <h2 className="text-xl font-bold">قنواتنا المباشرة</h2>
-      </div>
+     <div className="mb-6 w-full">
+    <h2 className="text-xl font-bold text-right">قنواتنا المباشرة</h2>
+  </div>
 
       <div className="relative">
-        {/* Left Arrow - Positioned absolutely */}
         <button
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/50 rounded-full p-2 hover:bg-gray-700"
           onClick={scrollRight}
@@ -105,7 +104,6 @@ export default function LiveChannels() {
           <ChevronLeft className="h-6 w-6" />
         </button>
 
-        {/* Right Arrow - Positioned absolutely */}
         <button
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800/50 rounded-full p-2 hover:bg-gray-700"
           onClick={scrollLeft}
@@ -118,8 +116,8 @@ export default function LiveChannels() {
           ref={containerRef}
           className="flex overflow-x-auto pb-4 hide-scrollbar scroll-smooth px-12"
           style={{
-            scrollbarWidth: "none", // For Firefox
-            msOverflowStyle: "none", // For IE
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
         >
           <div className="flex space-x-8 space-x-reverse rtl">
@@ -144,13 +142,12 @@ export default function LiveChannels() {
         </div>
       </div>
 
-      {/* Add custom CSS to hide scrollbar */}
       <style jsx global>{`
         .hide-scrollbar::-webkit-scrollbar {
           display: none;
         }
         .rtl {
-          direction: rtl;
+          direction: ltr;
         }
       `}</style>
     </section>

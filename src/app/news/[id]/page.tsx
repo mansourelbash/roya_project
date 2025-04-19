@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowUpRightIcon, ChevronLeft, Goal } from "lucide-react"
+import { ArrowUpRightIcon } from "lucide-react"
 import RelatedNews from "@/components/news/related-news"
 import NewsFooter from "@/components/news/news-footer"
 import SocialShare from "@/components/news/social-share"

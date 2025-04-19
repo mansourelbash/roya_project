@@ -57,8 +57,8 @@ export const newsData = [
 export default function NewsSection() {
   return (
     <section className="py-8 px-4 border-t border-gray-800">
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-6">
+      <div className="container mx-auto md:border-1 border-neutral-600 md:p-8 rounded">
+        <div className="flex items-center mb-6">
           <h2 className="text-2xl font-bold">أخبار منوعة</h2>
           <div className="flex items-center space-x-4 space-x-reverse">
             <Link href="#" className="text-white hover:text-pink-400 text-sm">
@@ -83,7 +83,6 @@ export default function NewsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Featured News - Right Side */}
           <div className="space-y-6">
             {newsData.slice(0, 3).map((newsItem) => (
               <Link href={`/news/${newsItem.id}`} key={newsItem.id} className="flex flex-col space-y-2 group">
@@ -96,7 +95,6 @@ export default function NewsSection() {
             ))}
           </div>
 
-          {/* Featured News - Left Side with Image */}
           <div className="space-y-6">
             <Link href={`/news/7`} className="block group">
               <div className="relative h-64 rounded-md overflow-hidden mb-3">

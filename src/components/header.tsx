@@ -68,7 +68,7 @@ export default function Header() {
     menuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
   }`}
 >
-  <div className={`space-y-4 ${menuOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300`}>
+  <div className={`space-y-4 mt-2 ${menuOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 `}>
     <Link href="#" className="block hover:text-pink-400">الرئيسية</Link>
     <Link href="#" className="block hover:text-pink-400">مسلسلات</Link>
     <Link href="#" className="block hover:text-pink-400">رياضة</Link>

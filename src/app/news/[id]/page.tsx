@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft } from "lucide-react"
+import { ArrowUpRightIcon, ChevronLeft, Goal } from "lucide-react"
 import RelatedNews from "@/components/news/related-news"
 import NewsFooter from "@/components/news/news-footer"
 import SocialShare from "@/components/news/social-share"
@@ -229,13 +229,14 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
       <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center" dir="rtl">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">الخبر غير موجود</h1>
-          <Link
-            href="/"
-            className="text-pink-500 hover:text-pink-400 flex items-center justify-center"
-          >
-            <ChevronLeft className="h-4 w-4 ml-1" />
-            العودة للصفحة الرئيسية
-          </Link>
+          {/* <Link
+  href="/"
+  className="inline-flex items-center gap-2 text-base text-gray-300 hover:text-pink-500 transition-colors"
+>
+  <ChevronLeft className="h-5 w-5" />
+  <span className="underline underline-offset-4">العودة للصفحة الرئيسية</span>
+</Link> */}
+
         </div>
       </div>
     );
@@ -257,10 +258,10 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
               <div className="flex items-center mb-4">
                 <Link
                   href="/"
-                  className="flex items-center text-gray-400 hover:text-pink-500 text-sm"
+                  className="flex items-center text-black-400 hover:text-pink-500 text-md bg-gray-200 p-1 rounded-md"
                 >
-                  <ChevronLeft className="h-4 w-4 ml-1" />
-                  <span>العودة للصفحة الرئيسية</span>
+                  <ArrowUpRightIcon className="h-4 w-4 ml-1 text-black" />
+                  <span className="text-black">العودة للصفحة الرئيسية</span>
                 </Link>
               </div>
               <div className="flex items-center justify-between mb-2">

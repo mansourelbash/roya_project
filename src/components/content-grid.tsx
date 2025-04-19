@@ -21,7 +21,7 @@ interface ContentGridProps {
   columns?: number;
   height?: boolean;
   playVideo?: boolean;
-  hideTitle?: boolean
+  hideTitle?: boolean;
 }
 
 export default function ContentGrid({
@@ -68,7 +68,7 @@ export default function ContentGrid({
 
         <div
           ref={sliderRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 transition-transform duration-300"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 transition-transform duration-300"
         >
           {visibleItems.map((item) => (
             <Link
@@ -78,8 +78,10 @@ export default function ContentGrid({
             >
               <div
                 className={`relative ${
-                  height ? "w-[300px] h-[372px] rounded-none" : "h-40 rounded-md"
-                }  overflow-hidden group`}
+                  height
+                    ? "w-full md:max-w-[300px] h-[372px] rounded-none"
+                    : "w-full md:max-w-[300px] h-40 rounded-md"
+                } overflow-hidden group`}
               >
                 <Image
                   src={item.image || "/placeholder.svg"}
@@ -101,9 +103,11 @@ export default function ContentGrid({
                   </div>
                 )}
               </div>
-             {hideTitle &&<h3 className="mt-2 text-sm font-medium group-hover:text-pink-500 transition-colors">
-                {item.title}
-              </h3> } 
+              {hideTitle && (
+                <h3 className="mt-2 text-sm font-medium group-hover:text-pink-500 transition-colors">
+                  {item.title}
+                </h3>
+              )}
             </Link>
           ))}
         </div>

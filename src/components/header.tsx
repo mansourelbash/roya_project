@@ -13,12 +13,14 @@ export default function Header() {
     <header className="bg-gray-800 py-4 px-4 sticky top-0 z-50" dir="rtl">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <Image
-            src="https://roya.tv/images/logo-svg.svg"
-            alt="Roya Logo"
-            width={40}
-            height={40}
-          />
+          <Link href="/">
+            <Image
+              src="https://roya.tv/images/logo-svg.svg"
+              alt="Roya Logo"
+              width={40}
+              height={40}
+            />
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex ml-6 space-x-4 space-x-reverse">
@@ -64,23 +66,23 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-  className={`md:hidden bg-gray-900 text-white px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-    menuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
-  }`}
->
-  <div className={`space-y-4 mt-2 ${menuOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 `}>
-    <Link href="#" className="block hover:text-pink-400">الرئيسية</Link>
-    <Link href="#" className="block hover:text-pink-400">مسلسلات</Link>
-    <Link href="#" className="block hover:text-pink-400">رياضة</Link>
-    <Link href="#" className="block hover:text-pink-400">برامج</Link>
-    <Link href="#" className="block hover:text-pink-400">أخبار</Link>
-    <Link href="#" className="block hover:text-pink-400">فيديو</Link>
-    <Link href="#" className="block hover:text-pink-400">طقس</Link>
-    <Link href="#" className="block hover:text-pink-400">عربية</Link>
-    <Link href="#" className="block hover:text-pink-400">تقديم البرامج</Link>
-    <Link href="#" className="block hover:text-pink-400">البرامج</Link>
-  </div>
-</div>
+        className={`md:hidden bg-gray-900 text-white px-6 overflow-hidden transition-all duration-300 ease-in-out ${
+          menuOpen ? "max-h-screen py-4" : "max-h-0 py-0"
+        }`}
+      >
+        <div className={`space-y-4 mt-2 ${menuOpen ? "opacity-100" : "opacity-0"} transition-opacity duration-300 `}>
+          <Link href="#" className="block hover:text-pink-400">الرئيسية</Link>
+          <Link href="#" className="block hover:text-pink-400">مسلسلات</Link>
+          <Link href="#" className="block hover:text-pink-400">رياضة</Link>
+          <Link href="#" className="block hover:text-pink-400">برامج</Link>
+          <Link href="#" className="block hover:text-pink-400">أخبار</Link>
+          <Link href="#" className="block hover:text-pink-400">فيديو</Link>
+          <Link href="#" className="block hover:text-pink-400">طقس</Link>
+          <Link href="#" className="block hover:text-pink-400">عربية</Link>
+          <Link href="#" className="block hover:text-pink-400">تقديم البرامج</Link>
+          <Link href="#" className="block hover:text-pink-400">البرامج</Link>
+        </div>
+      </div>
     </header>
   )
 }

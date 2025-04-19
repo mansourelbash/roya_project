@@ -37,7 +37,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "1",
       title: 'هكذا ردت سيلاف فواخرجي على قرار فصلها من "الفنانين السوريين"',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744891965.png",
       content: "في أول تعليق لها على قرار فصلها من نقابة الفنانين السوريين، عبّرت الفنانة سلاف فواخرجي عن استغرابها مما حدث، مؤكدة أن القرار جاء مفاجئاً ودون سابق إنذار. وأضافت أنها ستقوم باتخاذ الخطوات القانونية المناسبة، مشددة على احترامها للنقابة ومكانتها رغم ما وصفته بـ\"الظلم\" الذي طالها.",
@@ -47,7 +47,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "2",
       title: "إحنا رايحين على فين.. علاء مبارك يهاجم محمد رمضان بعد إطلالته بأمريكا",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744886311.png",
       content: "هاجم علاء مبارك، نجل الرئيس المصري الأسبق حسني مبارك، الفنان محمد رمضان بعد ظهوره الأخير في أحد العروض بأمريكا بإطلالة أثارت الجدل. وكتب مبارك في منشور عبر \"إكس\": \"إحنا رايحين على فين؟\"، في إشارة إلى ما وصفه بانحدار الذوق العام، مطالباً الفنانين بتحمل مسؤولياتهم تجاه صورة الفن المصري.",
@@ -57,7 +57,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "3",
       title: 'شيرين بيري، عن خاتم ألماس بالزين: "الخواتم"- فيديو',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744896438.png",
       content: "أثارت المؤثرة شيرين بيري الجدل عبر مواقع التواصل الاجتماعي بعد ظهورها بخاتم ألماس فاخر خلال فيديو ظهرت فيه وهي تستعرض مجوهراتها. وقالت مازحة: \"الخواتم مش أي خواتم\"، ما دفع المتابعين للتفاعل مع الفيديو بين معجبين ومشككين في قيمة الخاتم الحقيقية.",
@@ -67,7 +67,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "4",
       title: 'حمزة نمرة يشوق جمهوره لـ"النومة السابعة"',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744884530.png",
       content: "شارك الفنان حمزة نمرة جمهوره عبر حساباته على مواقع التواصل الاجتماعي مقطعاً موسيقياً من ألبومه القادم \"النومة السابعة\"، معلقاً: \"قريباً\". وتفاعل الجمهور بشكل واسع مع المقطع، وسط حالة من الترقب لإطلاق الأغنية الكاملة، والتي يقال إنها تحمل طابعاً موسيقياً مختلفاً عن أعماله السابقة.",
@@ -77,7 +77,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "5",
       title: "نجاة علياء صبحي وابنتها من حادث مروع - صور",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744881572.png",
       content: "تعرضت الفنانة علياء صبحي لحادث سير مروع أثناء تواجدها برفقة ابنتها على أحد الطرق السريعة. وأكدت صبحي عبر حسابها على إنستغرام أنها وابنتها بخير، شاكرة كل من تواصل معها للاطمئنان. ونشرت صوراً من موقع الحادث تُظهر الأضرار التي لحقت بالسيارة.",
@@ -87,7 +87,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "6",
       title: 'محمد فضل شاكر: "والدي بريء وبواجه اتهامات جديدة"- فيديو',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744894090.png",
       content: "في ظهور إعلامي جديد، دافع محمد فضل شاكر عن والده الفنان فضل شاكر، مؤكداً أن الأخير بريء من الاتهامات الموجهة له، مشيراً إلى أن هناك حملة ممنهجة لتشويه صورته. ونشر شاكر مقطع فيديو عبر صفحته الشخصية تحدث فيه عن تفاصيل ما وصفه بـ\"الظلم الإعلامي\" الذي يطال والده.",
@@ -97,7 +97,7 @@ const getNewsById = (id: string): NewsItem | undefined => {
     {
       id: "7",
       title: '"سنو وايت" سواد في التقييم وممثلة "إسرائيلية" تضع ديزني بين فكي الفشل"',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1743150119.png",
       content: "واجه فيلم \"سنو وايت\" الجديد من إنتاج ديزني موجة من الانتقادات بسبب اختياراته الجريئة في الطاقم التمثيلي والتغييرات الكبيرة في القصة الكلاسيكية. وزاد الجدل بعد الكشف عن مشاركة ممثلة \"إسرائيلية\" في دور البطولة، ما أثار غضب العديد من المتابعين ودفعهم لمقاطعة الفيلم، في وقت تشير فيه التقييمات الأولية إلى تراجع كبير في شعبية العمل.",
@@ -114,51 +114,58 @@ const getRelatedNews = (currentId: string): RelatedNewsItem[] => {
     {
       id: "1",
       title: 'هكذا ردت سيلاف فواخرجي على قرار فصلها من "الفنانين السوريين"',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 1",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744891965.png",
     },
     {
       id: "2",
       title: "إحنا رايحين على فين.. علاء مبارك يهاجم محمد رمضان بعد إطلالته بأمريكا",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 2",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744886311.png",
     },
     {
       id: "3",
       title: 'شيرين بيري، عن خاتم ألماس بالزين: "الخواتم"- فيديو',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 3",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744896438.png",
     },
     {
       id: "4",
       title: 'حمزة نمرة يشوق جمهوره لـ"النومة السابعة"',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 4",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744884530.png",
     },
     {
       id: "5",
       title: "نجاة علياء صبحي وابنتها من حادث مروع - صور",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 5",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744881572.png",
     },
     {
       id: "6",
       title: 'محمد فضل شاكر: "والدي بريء وبواجه اتهامات جديدة"- فيديو',
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 6",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1744894090.png",
     },
     {
       id: "7",
       title: "شيرين رضا: من نجمة إعلانات إلى نجمة سينما",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
-      image: "/placeholder.svg?height=100&width=150&text=Related 7",
+      image:
+      "https://backend.roya-tv.com/imagechanger/Size02Q40R169//images/articles/1743150119.png",
     },
     {
       id: "8",
@@ -170,14 +177,14 @@ const getRelatedNews = (currentId: string): RelatedNewsItem[] => {
     {
       id: "9",
       title: "كاظم الساهر يحيي حفلاً في الأردن الشهر المقبل",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "/placeholder.svg?height=100&width=150&text=Related 9",
     },
     {
       id: "10",
       title: "نانسي عجرم تطلق أغنيتها الجديدة 'حبيبي'",
-      category: "في مشاهير",
+      category: "فن ومشاهير",
       date: "17/04/25",
       image: "/placeholder.svg?height=100&width=150&text=Related 10",
     },
@@ -255,48 +262,25 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
         <div className="flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-3/4">
             <div className="mb-4">
-              <div className="flex items-center mb-4">
-                <Link
-                  href="/"
-                  className="flex items-center text-black-400 hover:text-pink-500 text-md bg-gray-200 p-1 rounded-md"
-                >
-                  <ArrowUpRightIcon className="h-4 w-4 ml-1 text-black" />
-                  <span className="text-black">العودة للصفحة الرئيسية</span>
-                </Link>
-              </div>
+
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center text-sm">
                   <Link
                     href="/news"
-                    className="text-pink-500 hover:text-pink-400"
+                    className="text-slate-400"
                   >
                     {news.category}
                   </Link>
                   <span className="mx-2 text-gray-500">|</span>
                   <span className="text-gray-400">{news.date}</span>
                 </div>
-                <div className="flex items-center">
-                  <Link
-                    href="/top10"
-                    className="text-gray-400 hover:text-pink-400 text-sm flex items-center"
-                  >
-                    <span>Top 10</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 mr-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </Link>
-                </div>
+                <Link
+                  href="/"
+                  className="flex items-center text-black-400  text-sm bg-gray-200 p-1 rounded-md"
+                >
+                  <ArrowUpRightIcon className="h-4 w-4 ml-1 text-black" />
+                  <span className="text-black">العودة للصفحة الرئيسية</span>
+                </Link>
               </div>
 
               <h1 className="text-3xl font-bold mb-6">{news.title}</h1>
@@ -340,13 +324,6 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
 
             <SocialShare />
 
-            <div className="my-8">
-              <AdBanner
-                text="بنزينك شو ما يكون - حط لي وإزالة"
-                image="/placeholder.svg?height=100&width=800&text=Ad Banner"
-              />
-            </div>
-
             <div className="mt-12">
               <h2 className="text-xl font-bold mb-6">أخبار أكثر قراءة</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -365,7 +342,7 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
                       />
                     </div>
                     <div>
-                      <h3 className="font-medium group-hover:text-pink-500 transition-colors line-clamp-2">
+                      <h3 className="font-medium transition-colors line-clamp-2">
                         {item.title}
                       </h3>
                       <div className="flex items-center text-xs text-gray-400 mt-2">
@@ -381,32 +358,14 @@ export default async function NewsPage({ params }: { params: Promise<{ id: strin
           <div className="w-full md:w-1/4">
             <RelatedNews relatedNews={relatedNews} />
 
-            <div className="mb-8">
-              <Image
-                src="/placeholder.svg?height=600&width=300&text=Ad Banner"
-                alt="Advertisement"
-                width={300}
-                height={600}
-                className="rounded-md"
-              />
-            </div>
-
             <div className="bg-gray-800 rounded-md p-4 mb-8">
-              <h3 className="text-lg font-bold mb-4">
-                تابعنا على Instagram
-              </h3>
               <div className="relative h-[300px] w-full">
                 <Image
-                  src="/placeholder.svg?height=300&width=300&text=Instagram Feed"
+                  src="https://tpc.googlesyndication.com/simgad/13476810604955794854"
                   alt="Instagram Feed"
                   fill
                   className="object-cover rounded-md"
                 />
-              </div>
-              <div className="flex justify-center mt-4">
-                <Link href="#" className="text-pink-500 hover:text-pink-400">
-                  @royatv
-                </Link>
               </div>
             </div>
           </div>
